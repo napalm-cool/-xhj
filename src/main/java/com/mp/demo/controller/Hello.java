@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author ycn
  */
 @RestController
-public class hello {
-
-
+public class Hello {
     @RequestMapping(value = "/")
     public String helloWorld ()  {
         return "运行了";
