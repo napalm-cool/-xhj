@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+user:
+  time: 3000000
+  ServePath: http://localhost:8080
+
+spring:
+  # 配置数据源
+  datasource:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/mp_student?useUnicode=true&characterEncoding=utf-8
+    #username: root
+    #password: root
+    #type: com.alibaba.druid.pool.DruidDataSource
+
+    url: jdbc:oracle:thin:@44.64.177.231:1521:TCSDB
+    username: tcs
+    password: tcs
+    driverClassName: oracle.jdbc.OracleDriver
+
+# mybatis-plus相关配置
+mybatis-plus:
+
+  configuration:
+    # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+    map-underscore-to-camel-case: false
+    # 返回map时true:当查询数据为空时字段返回为null,false:不加这个查询数据为空时，字段将被隐藏
+    call-setters-on-nulls: true
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
